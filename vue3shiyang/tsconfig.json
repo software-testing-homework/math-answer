@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+   "compilerOptions": {
+    // ... 其他配置
+    "types": [
+      "vitest/globals" // 👈 确保这里有这一行
+    ]
+  }
+}

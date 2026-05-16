@@ -1,0 +1,249 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3548), pid=53664, tid=55548
+#
+# JRE version:  (17.0.13+10) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.13+10-LTS-268, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dnet.bytebuddy.agent.attacher.dump= net.bytebuddy.agent.Attacher com.sun.tools.attach.VirtualMachine 66480 C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.10\byte-buddy-agent-1.15.10.jar false 
+
+Host: 12th Gen Intel(R) Core(TM) i7-12700H, 20 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.8246)
+Time: Wed May  6 20:47:57 2026  Windows 11 , 64 bit Build 26100 (10.0.26100.8246) elapsed time: 2.145696 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c9b9ad9020):  JavaThread "Unknown thread" [_thread_in_vm, id=55548, stack(0x00000088bd100000,0x00000088bd200000)]
+
+Stack: [0x00000088bd100000,0x00000088bd200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a23a]
+V  [jvm.dll+0x7da96d]
+V  [jvm.dll+0x7dc2b3]
+V  [jvm.dll+0x7dc923]
+V  [jvm.dll+0x2450ef]
+V  [jvm.dll+0x677279]
+V  [jvm.dll+0x66bf22]
+V  [jvm.dll+0x302006]
+V  [jvm.dll+0x3095a6]
+V  [jvm.dll+0x359e9e]
+V  [jvm.dll+0x35a0cf]
+V  [jvm.dll+0x2d90d8]
+V  [jvm.dll+0x2da044]
+V  [jvm.dll+0x7ace81]
+V  [jvm.dll+0x367701]
+V  [jvm.dll+0x78bcc9]
+V  [jvm.dll+0x3ec9bf]
+V  [jvm.dll+0x3ee5f1]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8c3fc]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff801a68a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001c9c2e2f300 GCTaskThread "GC Thread#0" [stack: 0x00000088bd600000,0x00000088bd700000] [id=58240]
+  0x000001c9c2e40430 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000088bd700000,0x00000088bd800000] [id=71188]
+  0x000001c9c2e42b00 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000088bd800000,0x00000088bd900000] [id=35104]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff801299bc7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001c9b9a883c0] Heap_lock - owner thread: 0x000001c9b9ad9020
+
+Heap address: 0x0000000704000000, size: 4032 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000704000000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff801683a29]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.120 Loaded shared library D:\LeStoreDownload\JDK17\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff649c50000 - 0x00007ff649c60000 	D:\LeStoreDownload\JDK17\bin\java.exe
+0x00007ff93f880000 - 0x00007ff93fae7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff93eda0000 - 0x00007ff93ee69000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff93cd50000 - 0x00007ff93d144000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff852870000 - 0x00007ff85291e000 	d:\LeStoreDownload\tare\Trae\resources\app\modules\sandbox\x64\trae_sbox.dll
+0x00007ff93e960000 - 0x00007ff93ea16000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff93ee70000 - 0x00007ff93ef19000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff93ef20000 - 0x00007ff93efc7000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff93dce0000 - 0x00007ff93ddf8000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff93d150000 - 0x00007ff93d29b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff881940000 - 0x00007ff881959000 	D:\LeStoreDownload\JDK17\bin\jli.dll
+0x00007ff881920000 - 0x00007ff88193b000 	D:\LeStoreDownload\JDK17\bin\VCRUNTIME140.dll
+0x00007ff93f080000 - 0x00007ff93f245000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff93c9c0000 - 0x00007ff93c9e7000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff93efd0000 - 0x00007ff93effb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff93b3c0000 - 0x00007ff93b653000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8115_none_3e075c82e3354f9c\COMCTL32.dll
+0x00007ff93d2a0000 - 0x00007ff93d3cb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff93cbf0000 - 0x00007ff93cc93000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff933570000 - 0x00007ff93357b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff868840000 - 0x00007ff8688cf000 	d:\LeStoreDownload\tare\Trae\resources\app\modules\sandbox\x64\sbox_ipc.dll
+0x00007ff93dc80000 - 0x00007ff93dcb2000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff93ba20000 - 0x00007ff93bc62000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ff93d610000 - 0x00007ff93d992000 	C:\WINDOWS\System32\combase.dll
+0x00007ff93dfb0000 - 0x00007ff93e088000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff93b8a0000 - 0x00007ff93b8db000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff885390000 - 0x00007ff88539c000 	D:\LeStoreDownload\JDK17\bin\vcruntime140_1.dll
+0x00007ff850300000 - 0x00007ff85038e000 	D:\LeStoreDownload\JDK17\bin\msvcp140.dll
+0x00007ff800fb0000 - 0x00007ff801b91000 	D:\LeStoreDownload\JDK17\bin\server\jvm.dll
+0x00007ff93f250000 - 0x00007ff93f258000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff91a480000 - 0x00007ff91a48a000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff93f260000 - 0x00007ff93f2e0000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff92e7d0000 - 0x00007ff92e806000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff93a620000 - 0x00007ff93a63b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff884260000 - 0x00007ff88426a000 	D:\LeStoreDownload\JDK17\bin\jimage.dll
+0x00007ff93cca0000 - 0x00007ff93cd45000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff93a130000 - 0x00007ff93a262000 	C:\WINDOWS\SYSTEM32\dnsapi.dll
+0x00007ff93a0f0000 - 0x00007ff93a122000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ff93dea0000 - 0x00007ff93deaa000 	C:\WINDOWS\System32\NSI.dll
+0x00007ff93e190000 - 0x00007ff93e8f7000 	C:\WINDOWS\System32\Shell32.dll
+0x00007ff93ca80000 - 0x00007ff93cbea000 	C:\WINDOWS\System32\wintypes.dll
+0x00007ff93c150000 - 0x00007ff93c9b8000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ff93deb0000 - 0x00007ff93dfa8000 	C:\WINDOWS\System32\shcore.dll
+0x00007ff9390a0000 - 0x00007ff939149000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ff93f340000 - 0x00007ff93f3a6000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ff93e0d0000 - 0x00007ff93e17e000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ff9250c0000 - 0x00007ff925713000 	C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+0x00007ff93ea20000 - 0x00007ff93ebb7000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff93bde0000 - 0x00007ff93be31000 	C:\WINDOWS\SYSTEM32\CFGMGR32.dll
+0x00007ff936c50000 - 0x00007ff936d53000 	C:\WINDOWS\system32\propsys.dll
+0x00007ff922800000 - 0x00007ff9229df000 	C:\Windows\System32\urlmon.dll
+0x00007ff922530000 - 0x00007ff9227f4000 	C:\Windows\System32\iertutil.dll
+0x00007ff922500000 - 0x00007ff922529000 	C:\Windows\System32\srvcli.dll
+0x00007ff939db0000 - 0x00007ff939dbd000 	C:\Windows\System32\netutils.dll
+0x00007ff906480000 - 0x00007ff9065f8000 	C:\Windows\System32\Windows.System.Launcher.dll
+0x00007ff90dca0000 - 0x00007ff90dcbd000 	C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+0x00007ff906a90000 - 0x00007ff906b54000 	C:\Windows\System32\Windows.StateRepositoryPS.dll
+0x00007ff93b970000 - 0x00007ff93b9a6000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x00007ff905be0000 - 0x00007ff905ca0000 	C:\Windows\System32\Windows.FileExplorer.Common.dll
+0x00007ff90dc50000 - 0x00007ff90dc97000 	C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll
+0x00007ff9057f0000 - 0x00007ff905822000 	C:\Windows\System32\cldapi.dll
+0x00007ff93a880000 - 0x00007ff93a8c9000 	C:\WINDOWS\SYSTEM32\SspiCli.dll
+0x00007ff93c040000 - 0x00007ff93c06a000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ff93c070000 - 0x00007ff93c099000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ff8816e0000 - 0x00007ff881705000 	D:\LeStoreDownload\JDK17\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\LeStoreDownload\JDK17\bin;C:\WINDOWS\SYSTEM32;d:\LeStoreDownload\tare\Trae\resources\app\modules\sandbox\x64;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8115_none_3e075c82e3354f9c;D:\LeStoreDownload\JDK17\bin\server
+
+VM Arguments:
+jvm_args: -Dnet.bytebuddy.agent.attacher.dump= 
+java_command: net.bytebuddy.agent.Attacher com.sun.tools.attach.VirtualMachine 66480 C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.10\byte-buddy-agent-1.15.10.jar false 
+java_class_path (initial): C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.10\byte-buddy-agent-1.15.10.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 4                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 15                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4227858432                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4227858432                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\\LeStoreDownload\\JDK17
+PATH=D:\\LeStoreDownload\\JDK17\\bin;C:\\Users\\Lenovo\\.trae\\tools\\maven\\latest\\bin;C:\\Users\\Lenovo\\.trae\\tools\\gradle\\latest\\bin;c:\\Users\\Lenovo\\.trae\\tools\\trae-gopls\\current;c:\\Users\\Lenovo\\.trae\\sdks\\workspaces\\2973a95f\\versions\\node\\current;c:\\Users\\Lenovo\\.trae\\sdks\\versions\\node\\current;D:\LeStoreDownload\Anacondadownload;D:\LeStoreDownload\Anacondadownload\Library\mingw-w64\bin;D:\LeStoreDownload\Anacondadownload\Library\usr\bin;D:\LeStoreDownload\Anacondadownload\Library\bin;D:\LeStoreDownload\Anacondadownload\Scripts;D:\LeStoreDownload\Anacondadownload\bin;D:\LeStoreDownload\Anacondadownload\condabin;D:\LeStoreDownload\JDK17\bin;C:\Users\Lenovo\.trae\tools\maven\latest\bin;C:\Users\Lenovo\.trae\tools\gradle\latest\bin;c:\Users\Lenovo\.trae\tools\trae-gopls\current;c:\Users\Lenovo\.trae\sdks\workspaces\2973a95f\versions\node\current;c:\Users\Lenovo\.trae\sdks\versions\node\current;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\libnvvp;D:\LeStoreDownload\vmware\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;D:\LeStoreDownload\bandizip;C:\Program Files\dotnet;D:\Useful\Node.js\node-v20.18.3-win-x64;D:\LeStoreDownload\git\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\Useful\npm;D:\LeStoreDownload\wechattools\微信web开发者工具\dll;D:\LeStoreDownload\Maven\apache-maven-3.8.8\bin;D:\LeStoreDownload\JDK17\bin;D:\LeStoreDownload\mongodb\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2023.3.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;d:\LeStoreDownload\tare\Trae CN\bin;d:\LeStoreDownload\tare\Trae CN\bin;d:\LeStoreDownload\tare\Trae CN\bin;C:\Users\Lenovo\AppData\Local\Pro
+USERNAME=Lenovo
+LANG=zh_CN.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.8246)
+OS uptime: 7 days 10:41 hours
+Hyper-V role detected
+
+CPU: total 20 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x435, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv
+
+Memory: 4k page, system-wide physical 16124M (931M free)
+TotalPageFile size 41724M (AvailPageFile size 33M)
+current process WorkingSet (physical memory assigned to process): 31M, peak: 31M
+current process commit charge ("private bytes"): 77M, peak: 329M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.13+10-LTS-268) for windows-amd64 JRE (17.0.13+10-LTS-268), built on Sep 30 2024 06:33:13 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.

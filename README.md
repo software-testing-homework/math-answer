@@ -203,19 +203,21 @@ GET    /api/category/parent/{parentId}         按父分类获取子分类
 1. 创建数据库并执行 `init_all.sql`
 2. 修改 `application.yaml` 中的数据库密码和 DeepSeek API Key
 3. 主分支的ai配置根据下面改，没用zhipu了
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/math_qa_system?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 自己的密码
-  ai:
-    zhipuai:
-      api-key: "自己的api key"
-      base-url: "https://api.deepseek.com"
-      chat:
-        options:
-          model: deepseek-v4-flash
+   ```yaml
+   spring:
+     datasource:
+       driver-class-name: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://localhost:3306/math_qa_system?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+       username: root
+       password: 自己的
+     ai:
+       deepseek:
+         api-key: "自己的"
+         base-url: "https://api.deepseek.com"
+         chat:
+           options:
+             model: deepseek-v4-flash
+   ```
 4. 启动：`mvn spring-boot:run -pl start-01-ai`
 5. 访问：<http://localhost:8081>
 

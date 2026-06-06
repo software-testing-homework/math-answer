@@ -3,7 +3,6 @@
 -- 包含：数据库创建、表结构、初始数据、系统配置
 -- ============================================
 
--- 创建数据库
 CREATE DATABASE IF NOT EXISTS math_qa_system DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE math_qa_system;

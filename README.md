@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 数学问答系统
 
 基于 Spring Boot 3.x + Vue 3 + DeepSeek AI 的智能数学问答平台，采用前后端分离架构。
@@ -227,3 +228,6 @@ GET    /api/category/parent/{parentId}         按父分类获取子分类
 2. 开发模式：`npm run dev`
 3. 访问：<http://localhost:5173>
 
+=======
+# for our test homework
+>>>>>>> bc2dda0 (Add initial README for test homework)
